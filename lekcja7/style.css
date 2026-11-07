@@ -1,0 +1,91 @@
+body {
+	background-color: #cfe8ff;
+}
+
+#ambulance {
+	/* TODO: dodaj rozmiar, ramkę, zaokrąglenia, stylowanie napisu i gradient w tle */
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-radius: 200px 5px 5px 5px;
+	text-align: center;
+background: repeating-linear-gradient(
+  to bottom,
+  #0057ff 0px,
+  #0057ff 20px,
+  #8000ff 30px,
+  #ff0000 40px,
+  #ff0000 60px,
+  #8000ff 70px,
+  #0057ff 80px
+);
+}
+
+.wheel {
+	/* TODO: zrób z kwadratu koło z grubą ramką i uruchom animację spin */
+	width: 75px;
+	height: 75px;
+	border: 10px solid black;
+	border-radius: 50%;
+	animation: spin 1s infinite linear;
+
+}
+
+#wheel-front {
+	/* TODO: ustaw pozycję przedniego koła */
+	position: relative;
+	bottom: 50px;
+	left: 70px;
+}
+
+#wheel-back {
+	/* TODO: ustaw pozycję tylnego koła */
+	position: relative;
+	bottom: 150px;
+	left: 350px;
+
+}
+
+@keyframes spin {
+	/* TODO: opisz pełny obrót od 0 do 360 stopni */
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+#siren {
+	/* TODO: nadaj syrenie rozmiar, czarne tło i zaokrąglony górny brzeg */
+	position: relative;
+	left: 200px;
+	width: 100px;
+	height: 100px;
+	background-color: red;
+}
+
+#siren:hover {
+	/* TODO: uruchom animację siren po najechaniu myszką */
+	animation: siren 1s infinite;
+}
+
+@keyframes siren {
+	/* TODO: opisz zmianę koloru tła od czarnego, przez niebieski, do czerwonego */
+	0% {background-color: red;}
+	33% {background-color: black;}
+	66% {background-color: blue;}
+	100% {background-color: red;}
+}
+
+#emergency {
+	/* TODO: ustaw czerwoną tabliczkę z niebieską ramką i włącz płynne przejście */
+	text-align: center;
+	border: 2px solid blue;
+	border-radius: 10px;
+	width: 250px;
+	background-color: red;
+	transition: transform 1s;
+}
+
+#emergency:hover {
+	/* TODO: powiększ tabliczkę po najechaniu myszką */
+	transform: scale(2);
+
+}
